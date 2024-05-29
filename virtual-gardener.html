@@ -1,28 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ask the Gardener</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Ask the Virtual Gardener</h1>
-        <nav>
-            <ul>
-                <li><a href="plants.html">Plants</a></li>
-                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
-            </ul>
-        </nav>
-    </header>
-    
-    <section id="virtual-gardener">
-        <textarea placeholder="Type your gardening question here..."></textarea>
-        <button onclick="askGardener()">Ask</button>
-        <p id="gardener-response"></p>
-    </section>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Ask the Gardener</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Ask the Virtual Gardener</h1>
+			<nav>
+				<ul>
+					<li><a href="plants.html">All Plants</a></li>
+					<li><a href="fruit-trees.html">Fruit Trees</a></li>
+					<li><a href="succulents.html">Succulents</a></li>
+					<li><a href="grasses.html">Grasses</a></li>
+					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+				</ul>
+			</nav>
+			<img
+				src="cart-icon.png"
+				alt="Shopping Cart"
+				class="cart-icon"
+				onclick="openCart()"
+			/>
+		</header>
 
-    <script src="script.js"></script>
-</body>
+		<main id="virtual-gardener">
+			<h2>Have a question about gardening? Ask away!</h2>
+			<textarea
+				id="question-box"
+				placeholder="Type your gardening question here..."
+			></textarea>
+			<button onclick="getGardenerResponse()">Ask</button>
+			<div id="gardener-response" class="response-area"></div>
+		</main>
+
+		<script src="script.js"></script>
+	</body>
 </html>

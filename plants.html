@@ -1,34 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Native Plants</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Native Plants</h1>
-        <nav>
-            <ul>
-                <li><a href="plants.html">Plants</a></li>
-                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
-            </ul>
-        </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Native Plants</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Native Plants</h1>
+			<nav>
+				<ul>
+					<li><a href="plants.html">All Plants</a></li>
+					<li><a href="fruit-trees.html">Fruit Trees</a></li>
+					<li><a href="succulents.html">Succulents</a></li>
+					<li><a href="grasses.html">Grasses</a></li>
+					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+				</ul>
+			</nav>
+			<img
+				src="cart-icon.png"
+				alt="Shopping Cart"
+				class="cart-icon"
+				onclick="openCart()"
+			/>
+		</header>
 
-    <section class="plant-list">
-        <!-- Dynamically added plant entries will go here -->
-        <!-- Example for one plant, replicate for each -->
-        <div class="plant">
-            <img src="plant1.jpg" alt="Plant 1">
-            <h3>Plant 1</h3>
-            <p>Description of Plant 1...</p>
-            <button onclick="openARVisualizer()">View in AR</button>
-        </div>
-        <!-- Add more plants following the same structure -->
-    </section>
+		<section class="plant-list">
+			<!-- Dynamically added plant entries will go here -->
+			<div class="plant">
+				<img src="plant1.jpg" alt="Plant 1" />
+				<h3>Plant 1</h3>
+				<p>Description of Plant 1...</p>
+				<button onclick="openARVisualizer()">View in AR</button>
+			</div>
+		</section>
 
-    <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>
