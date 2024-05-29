@@ -1,0 +1,39 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #79c265;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+section {
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+.plant {
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    padding: 10px;
+    display: inline-block;
+    width: 300px;
+}
+
+.plant img {
+    width: 100%;
+    height: auto;
+}
