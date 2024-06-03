@@ -21,7 +21,8 @@ document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('checkout-form').addEventListener('submit', function (event) {
         event.preventDefault();
         alert('Order placed successfully!');
+        localStorage.setItem('order', JSON.stringify(cart));
         localStorage.removeItem('cart');
-        window.location.href = 'index.html'; // Redirect to home page
+        window.location.href = 'order-confirmation.html';
     });
 });
