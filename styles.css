@@ -1,77 +1,77 @@
 body {
-	font-family: "Open Sans", Arial, sans-serif;
-	background-color: #f4f4f9;
-	color: #333;
+    font-family: "Open Sans", Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
 }
 
 header {
-	background: #79c265;
-	color: white;
-	padding: 10px 20px;
-	text-align: center;
+    background: #79c265;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
 }
 
 nav ul {
-	list-style-type: none;
-	padding: 0;
+    list-style-type: none;
+    padding: 0;
 }
 
 nav ul li {
-	display: inline;
-	margin-right: 20px;
+    display: inline;
+    margin-right: 20px;
 }
 
 .cart-icon {
-	position: fixed;
-	top: 20px;
-	right: 20px;
-	cursor: pointer;
-	width: 40px;
-	height: auto;
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    width: 40px;
+    height: auto;
 }
 
 main {
-	margin: 20px auto;
-	padding: 20px;
-	border: 1px solid #ccc;
-	background: white;
-	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background: white;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 1200px; /* Adjusted max-width for plant listing */
 }
 
 .response-area {
-	margin-top: 20px;
-	padding: 10px;
-	background-color: #e6ffe6;
-	border: 1px solid #b4dcb5;
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #e6ffe6;
+    border: 1px solid #b4dcb5;
 }
 
 textarea {
-	width: calc(100% - 20px);
-	height: 60px;
-	padding: 10px;
-	font-size: 16px;
-	border-radius: 20px;
-	border: 1px solid #ccc;
-	resize: none;
-	box-sizing: border-box;
+    width: calc(100% - 20px);
+    height: 60px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 20px;
+    border: 1px solid #ccc;
+    resize: none;
+    box-sizing: border-box;
 }
 
 #ask-button {
-	display: inline-block;
-	padding: 10px 20px;
-	margin-top: 10px;
-	background-color: #4caf50;
-	color: white;
-	border: none;
-	border-radius: 10px;
-	cursor: pointer;
-	font-size: 16px;
-	transition: background-color 0.3s;
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
 }
 
 #ask-button:hover {
-	background-color: #45a049;
+    background-color: #45a049;
 }
 
 .ar-modal {
@@ -114,4 +114,72 @@ textarea {
     width: 300px;
     cursor: move;
     user-select: none; /* Prevents the image from being selected */
+}
+
+.plant-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.plant {
+    border: 1px solid #ddd;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    text-align: center;
+    cursor: pointer; /* Add cursor pointer for clickable items */
+}
+
+.plant img {
+    max-width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    margin-bottom: 10px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    border: none;
+    background-color: #4caf50;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.pagination button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1.2em;
+}
+
+.plant-details img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
 }
