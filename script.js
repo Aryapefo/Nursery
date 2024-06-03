@@ -46,12 +46,19 @@ function askGardener() {
 }
 
 const responses = {
-    "how to plant tomatoes":
-        "Tomatoes need full sun and well-drained soil. Plant them after the last frost date.",
-    "best fertilizer for roses":
-        "Use a balanced 10-10-10 fertilizer or compost tea every four weeks.",
-    "when to prune apple trees":
-        "Prune apple trees in late winter to encourage spring growth.",
+    "how to plant tomatoes": "Tomatoes need full sun and well-drained soil. Plant them after the last frost date.",
+    "best fertilizer for roses": "Use a balanced 10-10-10 fertilizer or compost tea every four weeks.",
+    "when to prune apple trees": "Prune apple trees in late winter to encourage spring growth.",
+    "what native plants are good for San Jose gardens": "San Jose is ideal for California poppies, Coyote mint, and Manzanita. These natives are drought-tolerant and great for attracting pollinators.",
+    "how often to water succulents in hot climates": "In hot climates, water succulents once every 1-2 weeks, allowing the soil to dry out completely between waterings.",
+    "identify pests on lemon trees": "Common pests on lemon trees include aphids, mites, and scale. Check for sticky leaves, webbing, or bumps on stems and leaves.",
+    "tips for growing herbs indoors": "Provide herbs with at least six hours of sunlight, use well-draining pots, and water when the top inch of soil feels dry.",
+    "how to test soil ph": "You can test soil pH using a home test kit from a garden store. Collect soil samples from different areas, mix them, and follow the kit instructions.",
+    "best plants for a shade garden": "For shaded gardens, consider hostas, ferns, and astilbes. These plants thrive in low-light conditions and add texture and color.",
+    "how to make compost at home": "Combine green waste (vegetable scraps, grass clippings) and brown waste (dry leaves, branches) in a bin. Turn the pile regularly and keep it moist.",
+    "where to find native plants in San Jose": "You can find native plants at local nurseries like the Almaden Valley Nursery or through the California Native Plant Society's Santa Clara Valley Chapter.",
+    "natural ways to repel garden pests": "Plant marigolds or garlic around your garden as they naturally repel pests like nematodes and aphids.",
+    "when is the best time to plant spring bulbs in California": "In California, plant spring bulbs in the fall, around October or November, to ensure they bloom beautifully in spring."
 };
 
 function getGardenerResponse() {
