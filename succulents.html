@@ -3,38 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Nursery</title>
+    <title>Succulents</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <header>
-			<h1>Succulents</h1>
-			<nav>
-				<ul>
-					<li><a href="plants.html">All Plants</a></li>
-					<li><a href="fruit-trees.html">Fruit Trees</a></li>
-					<li><a href="succulents.html">Succulents</a></li>
-					<li><a href="grasses.html">Grasses</a></li>
-					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
-				</ul>
-			</nav>
-			<img
-				src="cart-icon.png"
-				alt="Shopping Cart"
-				class="cart-icon"
-				onclick="openCart()"
-			/>
-		</header>
+        <h1>Succulents</h1>
+        <nav>
+            <ul>
+                <li><a href="plants.html">All Plants</a></li>
+                <li><a href="fruit-trees.html">Fruit Trees</a></li>
+                <li><a href="succulents.html">Succulents</a></li>
+                <li><a href="grasses.html">Grasses</a></li>
+                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+				<li><a href="checkout.html">Checkout</a></li> <!-- Add this line -->
+            </ul>
+        </nav>
+		<img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon" onclick="window.location.href='checkout.html'">
     </header>
-    <main>
-        <div id="plant-list" class="plant-list"></div>
-        <div class="pagination">
-            <button id="prevPage" onclick="changePage(-1)" disabled>Previous</button>
-            <span id="pageInfo"></span>
-            <button id="nextPage" onclick="changePage(1)">Next</button>
-        </div>
-    </main>
+
+    <section class="plant-list" id="plant-list">
+        <!-- Dynamically added plant entries will go here -->
+    </section>
+
+    <div class="pagination">
+        <button id="prevPage" onclick="changePage(-1)" disabled>Previous</button>
+        <span id="pageInfo"></span>
+        <button id="nextPage" onclick="changePage(1)">Next</button>
+    </div>
+
     <script src="succulentsScripts.js"></script>
 </body>
 </html>

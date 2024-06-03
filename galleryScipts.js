@@ -48,14 +48,24 @@ function renderPlants() {
         plantDiv.innerHTML = `
             <img src="${plant.image}" alt="${plant.name}" onclick="viewDetails(${plant.id})">
             <h3>${plant.name}</h3>
+            <p>${plant.description}</p>
+            <p><strong>Price:</strong> ${plant.price}</p>
+            <button onclick="addToCart(${plant.id})">Add to Cart</button>
         `;
-        plantDiv.addEventListener('click', () => viewDetails(plant.id));
         plantList.appendChild(plantDiv);
     });
 
     document.getElementById('pageInfo').innerText = `Page ${currentPage} of ${Math.ceil(plants.length / plantsPerPage)}`;
     document.getElementById('prevPage').disabled = currentPage === 1;
     document.getElementById('nextPage').disabled = end >= plants.length;
+}
+
+function addToCart(plantId) {
+    const plant = plants.find(p => p.id === plantId);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(plant);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${plant.name} has been added to your cart.`);
 }
 
 function viewDetails(plantId) {
