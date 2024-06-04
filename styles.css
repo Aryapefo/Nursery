@@ -278,3 +278,55 @@ button:hover {
 .plant-card button:hover {
     background-color: #67a456;
 }
+
+#userLocation {
+    color: white;
+    position: absolute;
+    right: 20px;
+    top: 100px; /* Adjust this value as needed to move it up */
+    padding-right: 20px;
+}
+
+
+
+.plant-category {
+    margin: 20px;
+    padding: 20px;
+}
+
+.plant-scroll {
+    display: flex;
+    overflow-x: auto;
+    padding: 10px 0;
+}
+
+.plant-card {
+    flex: 0 0 auto;
+    width: 200px;
+    margin-right: 15px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.plant-card img {
+    width: 100%;
+    height: 200px; /* Adjust based on your images */
+    object-fit: cover;
+}
+
+.plant-card h3, .plant-card p {
+    margin: 5px 0;
+}
+
+.plant-card button {
+    background-color: #79c265;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    width: 100%;
+}
+
+.plant-card button:hover {
+    background-color: #67a456;
+}
