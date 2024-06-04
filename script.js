@@ -30,13 +30,11 @@ function dragElement(elmnt) {
 		pos2 = pos4 - e.clientY;
 		pos3 = e.clientX;
 		pos4 = e.clientY;
-		// New position calculations will be within the modal:
 		elmnt.style.top = elmnt.offsetTop - pos2 + "px";
 		elmnt.style.left = elmnt.offsetLeft - pos1 + "px";
 	}
 
 	function closeDragElement() {
-		// stop moving when mouse button is released
 		document.onmouseup = null;
 		document.onmousemove = null;
 	}
@@ -86,7 +84,6 @@ function getGardenerResponse() {
 	responseArea.innerHTML = `<p>${response}</p>`;
 }
 
-// New functions for cart and pagination
 const plantsPerPage = 25;
 let currentPage = 1;
 
@@ -189,7 +186,6 @@ document
     }
     
     function loadRecommendations(location) {
-        // Dummy data for demonstration
         const recommendations = {
             "San Jose": ["California Poppy", "Coyote Mint", "Manzanita"],
             "default": ["Sunflower", "Lavender", "Rose"]
@@ -197,7 +193,7 @@ document
     
         const plants = recommendations[location] || recommendations["default"];
         const container = document.getElementById('recommendedPlants');
-        container.innerHTML = ''; // Clear previous recommendations
+        container.innerHTML = '';
         plants.forEach(plant => {
             container.innerHTML += `<p>${plant}</p>`;
         });
@@ -205,13 +201,12 @@ document
     
 
 
-// Example categorization
 const succulents = plants.filter(plant => plant.type === 'Succulent');
 const grasses = plants.filter(plant => plant.type === 'Grass');
 
 function renderPlants(plantList, containerId) {
     const container = document.getElementById(containerId);
-    container.innerHTML = ''; // Clear existing entries
+    container.innerHTML = '';
 
     plantList.forEach(plant => {
         const plantDiv = document.createElement('div');
@@ -243,6 +238,5 @@ document.addEventListener('DOMContentLoaded', () => {
 const plants = [
     { id: 1, name: 'Lawngrass', image: 'grass1.jpg', price: '$8.00', description: 'Lawngrass is commonly found in your backyard', type: 'Grass' },
     { id: 2, name: 'Aloe Vera', image: 'succulent1.jpg', price: '$15.00', description: 'Aloe Vera is good for skin treatment and decoration', type: 'Succulent' },
-    // Add more plants with types
 ];
 

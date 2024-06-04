@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // Clear the order after displaying the order details
     localStorage.removeItem('order');
 });
 
