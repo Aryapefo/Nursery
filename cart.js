@@ -24,7 +24,7 @@ function removeFromCart(plantId) {
     let cart = JSON.parse(localStorage.getItem('cart')) || [];
     cart = cart.filter(item => item.id !== plantId);
     localStorage.setItem('cart', JSON.stringify(cart));
-    location.reload(); // Reload the page to update the cart
+    location.reload();
 }
 
 function goToCheckout() {
