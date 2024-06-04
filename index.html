@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Nursery</title>
-    <link rel="stylesheet" href="styles.css" />
-    <script src="script.js" defer></script>
-</head>
-<body onload="showLocationModal()">
-    <!-- Location Input Modal -->
-    <div id="locationModal" class="modal" style="display: none">
-        <div class="modal-content">
-            <span class="close" onclick="closeModal()">&times;</span>
-            <form id="locationForm">
-                <label for="location">Enter your location:</label>
-                <input type="text" id="location" name="location" required />
-                <button type="submit">Submit</button>
-            </form>
-        </div>
-    </div>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Online Nursery</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
+	</head>
+	<body onload="showLocationModal()">
+		<!-- Location Input Modal -->
+		<div id="locationModal" class="modal" style="display: none">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<form id="locationForm">
+					<label for="location">Enter your location:</label>
+					<input type="text" id="location" name="location" required />
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
 
-    <header id="mainHeader">
-        <h1>Welcome to the Online Nursery</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fruit-trees.html">Fruit Trees</a></li>
-                <li><a href="succulents.html">Succulents</a></li>
-                <li><a href="grasses.html">Grasses</a></li>
-                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-            </ul>
-        </nav>
-        <span id="userLocation" style="color: white; float: right; padding-right: 20px"></span>
-        <img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon" onclick="window.location.href='checkout.html'" />
-    </header>
+		<header id="mainHeader">
+			<h1>Native Roots Nursery</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="fruit-trees.html">Fruit Trees</a></li>
+					<li><a href="succulents.html">Succulents</a></li>
+					<li><a href="grasses.html">Grasses</a></li>
+					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+					<li><a href="checkout.html">Checkout</a></li>
+				</ul>
+			</nav>
+			<span
+				id="userLocation"
+				style="color: white; float: right; padding-right: 20px"
+			></span>
+			<img
+				src="shopping-cart.png"
+				alt="Shopping Cart"
+				class="cart-icon"
+				onclick="window.location.href='checkout.html'"
+			/>
+		</header>
 
-    <section class="plant-category">
-        <h2>Succulents</h2>
-        <div class="plant-scroll">
-            <!-- Example plant card, duplicate and modify as needed -->
-            <div class="plant-card">
-                <img src="plant7.jpg" alt="Succulent Plant">
-                <h3>Succulent Name</h3>
-                <p>Description of the succulent...</p>
-                <button onclick="addToCart()">Add to Cart</button>
-            </div>
-            <!-- More plants here -->
-        </div>
-    </section>
+		<section class="plant-category">
+			<h2>Succulents</h2>
+			<div class="plant-scroll">
+				<!-- Example plant card, duplicate and modify as needed -->
+				<div class="plant-card">
+					<img src="plant7.jpg" alt="Succulent Plant" />
+					<h3>Succulent Name</h3>
+					<p>Description of the succulent...</p>
+					<button onclick="addToCart()">Add to Cart</button>
+				</div>
+				<!-- More plants here -->
+			</div>
+		</section>
 
-    <section class="plant-category">
-        <h2>Grasses</h2>
-        <div class="plant-scroll">
-            <!-- Example plant card, duplicate and modify as needed -->
-            <div class="plant-card">
-                <img src="grass1.jpg" alt="Grass Plant">
-                <h3>Grass Name</h3>
-                <p>Description of the grass...</p>
-                <button onclick="addToCart()">Add to Cart</button>
-            </div>
-            <!-- More plants here -->
-        </div>
-    </section>
+		<section class="plant-category">
+			<h2>Grasses</h2>
+			<div class="plant-scroll">
+				<!-- Example plant card, duplicate and modify as needed -->
+				<div class="plant-card">
+					<img src="grass1.jpg" alt="Grass Plant" />
+					<h3>Grass Name</h3>
+					<p>Description of the grass...</p>
+					<button onclick="addToCart()">Add to Cart</button>
+				</div>
+				<!-- More plants here -->
+			</div>
+		</section>
 
-    <script src="script.js"></script>
-</body>
+		<script src="script.js"></script>
+	</body>
 </html>

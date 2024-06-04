@@ -1,36 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fruit Trees</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-    <header>
-        <h1>Fruit Trees</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="fruit-trees.html">Fruit Trees</a></li>
-                <li><a href="succulents.html">Succulents</a></li>
-                <li><a href="grasses.html">Grasses</a></li>
-                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
-                <li><a href="checkout.html">Checkout</a></li>
-            </ul>
-        </nav>
-        <img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon" onclick="window.location.href='checkout.html'">
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Fruit Trees</title>
+		<link rel="stylesheet" href="styles.css" />
+	</head>
+	<body>
+		<header>
+			<h1>Native Roots Nursery</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="fruit-trees.html">Fruit Trees</a></li>
+					<li><a href="succulents.html">Succulents</a></li>
+					<li><a href="grasses.html">Grasses</a></li>
+					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+					<li><a href="checkout.html">Checkout</a></li>
+				</ul>
+			</nav>
+			<img
+				src="shopping-cart.png"
+				alt="Shopping Cart"
+				class="cart-icon"
+				onclick="window.location.href='checkout.html'"
+			/>
+		</header>
 
-    <section class="plant-list" id="plant-list">
-    </section>
+		<section class="plant-list" id="plant-list"></section>
 
-    <div class="pagination">
-        <button id="prevPage" onclick="changePage(-1)" disabled>Previous</button>
-        <span id="pageInfo"></span>
-        <button id="nextPage" onclick="changePage(1)">Next</button>
-    </div>
+		<div class="pagination">
+			<button id="prevPage" onclick="changePage(-1)" disabled>Previous</button>
+			<span id="pageInfo"></span>
+			<button id="nextPage" onclick="changePage(1)">Next</button>
+		</div>
 
-    <script src="treeScripts.js"></script>
-</body>
+		<script src="treeScripts.js"></script>
+	</body>
 </html>
