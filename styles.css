@@ -24,12 +24,12 @@ nav ul li {
 }
 
 nav ul li a {
-	color: white; /* Set the desired link color */
+	color: white;
 	text-decoration: none;
 }
 
 nav ul li a:visited {
-	color: white; /* Ensure visited links retain the same color */
+	color: white;
 }
 
 .cart-icon {
@@ -47,7 +47,7 @@ main {
 	border: 1px solid #ccc;
 	background: white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	max-width: 1200px; /* Adjusted max-width for plant listing */
+	max-width: 1200px;
 }
 
 .response-area {
@@ -102,8 +102,8 @@ textarea {
 	background-position: center;
 	margin: 5% auto;
 	padding: 20px;
-	width: 90%; /* Adjust */
-	height: 80%; /* This can be adjusted based on the image and desired modal size */
+	width: 90%;
+	height: 80%;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -124,12 +124,12 @@ textarea {
 	position: absolute;
 	width: 300px;
 	cursor: move;
-	user-select: none; /* Prevents the image from being selected */
+	user-select: none;
 }
 
 .plant-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+	grid-template-columns: repeat(3, 1fr);
 	gap: 15px;
 	margin-bottom: 20px;
 }
@@ -140,7 +140,7 @@ textarea {
 	border-radius: 5px;
 	background-color: #fff;
 	text-align: center;
-	cursor: pointer; /* Add cursor pointer for clickable items */
+	cursor: pointer;
 }
 
 .plant img {
@@ -219,114 +219,7 @@ button:hover {
 	cursor: pointer;
 }
 
-/* #userLocation {
+#userLocation {
 	color: white;
 	margin-right: 20px;
-} */
-
-
-
-
-#userLocation {
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 100px; /* Adjust this value as needed to move it up */
-    padding-right: 20px;
-}
-
-
-
-.plant-category {
-    margin: 20px;
-    padding: 20px;
-}
-
-.plant-scroll {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px 0;
-}
-
-.plant-card {
-    flex: 0 0 auto;
-    width: 200px;
-    margin-right: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.plant-card img {
-    width: 100%;
-    height: 200px; /* Adjust based on your images */
-    object-fit: cover;
-}
-
-.plant-card h3, .plant-card p {
-    margin: 5px 0;
-}
-
-.plant-card button {
-    background-color: #79c265;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.plant-card button:hover {
-    background-color: #67a456;
-}
-
-#userLocation {
-    color: white;
-    position: absolute;
-    right: 20px;
-    top: 100px; /* Adjust this value as needed to move it up */
-    padding-right: 20px;
-}
-
-
-
-.plant-category {
-    margin: 20px;
-    padding: 20px;
-}
-
-.plant-scroll {
-    display: flex;
-    overflow-x: auto;
-    padding: 10px 0;
-}
-
-.plant-card {
-    flex: 0 0 auto;
-    width: 200px;
-    margin-right: 15px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-    text-align: center;
-}
-
-.plant-card img {
-    width: 100%;
-    height: 200px; /* Adjust based on your images */
-    object-fit: cover;
-}
-
-.plant-card h3, .plant-card p {
-    margin: 5px 0;
-}
-
-.plant-card button {
-    background-color: #79c265;
-    color: white;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    width: 100%;
-}
-
-.plant-card button:hover {
-    background-color: #67a456;
 }
