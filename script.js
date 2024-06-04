@@ -165,3 +165,84 @@ document
 		closeModal();
 		document.getElementById("mainHeader").style.display = "block";
 	});
+
+
+
+
+
+    document.getElementById('locationForm').addEventListener('submit', function(event) {
+        event.preventDefault();
+        const location = document.getElementById('location').value;
+        document.getElementById('userLocation').innerText = `Your location: ${location}`;
+        closeModal();
+        loadRecommendations(location);
+    });
+    
+    function showLocationModal() {
+        document.getElementById('locationModal').style.display = 'block';
+    }
+    
+    function closeModal() {
+        document.getElementById('locationModal').style.display = 'none';
+        document.getElementById('mainHeader').style.display = 'block';
+        document.getElementById('recommendationSection').style.display = 'block';
+    }
+    
+    function loadRecommendations(location) {
+        // Dummy data for demonstration
+        const recommendations = {
+            "San Jose": ["California Poppy", "Coyote Mint", "Manzanita"],
+            "default": ["Sunflower", "Lavender", "Rose"]
+        };
+    
+        const plants = recommendations[location] || recommendations["default"];
+        const container = document.getElementById('recommendedPlants');
+        container.innerHTML = ''; // Clear previous recommendations
+        plants.forEach(plant => {
+            container.innerHTML += `<p>${plant}</p>`;
+        });
+    }
+    
+
+
+// Example categorization
+const succulents = plants.filter(plant => plant.type === 'Succulent');
+const grasses = plants.filter(plant => plant.type === 'Grass');
+
+function renderPlants(plantList, containerId) {
+    const container = document.getElementById(containerId);
+    container.innerHTML = ''; // Clear existing entries
+
+    plantList.forEach(plant => {
+        const plantDiv = document.createElement('div');
+        plantDiv.className = 'plant-card';
+        plantDiv.innerHTML = `
+            <img src="${plant.image}" alt="${plant.name}">
+            <h3>${plant.name}</h3>
+            <p>${plant.description}</p>
+            <p><strong>Price:</strong> ${plant.price}</p>
+            <button onclick="addToCart(${plant.id})">Add to Cart</button>
+        `;
+        container.appendChild(plantDiv);
+    });
+}
+
+function addToCart(plantId) {
+    const plant = plants.find(p => p.id === plantId);
+    let cart = JSON.parse(localStorage.getItem('cart')) || [];
+    cart.push(plant);
+    localStorage.setItem('cart', JSON.stringify(cart));
+    alert(`${plant.name} has been added to your cart.`);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    renderPlants(succulents, 'succulent-list');
+    renderPlants(grasses, 'grass-list');
+});
+
+const plants = [
+    { id: 1, name: 'Lawngrass', image: 'grass1.jpg', price: '$8.00', description: 'Lawngrass is commonly found in your backyard', type: 'Grass' },
+    { id: 2, name: 'Aloe Vera', image: 'succulent1.jpg', price: '$15.00', description: 'Aloe Vera is good for skin treatment and decoration', type: 'Succulent' },
+    // Add more plants with types
+];
+
