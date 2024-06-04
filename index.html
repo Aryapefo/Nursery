@@ -5,9 +5,22 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Online Nursery</title>
 		<link rel="stylesheet" href="styles.css" />
+		<script src="script.js" defer></script>
 	</head>
-	<body>
-		<header>
+	<body onload="showLocationModal()">
+		<!-- Location Input Modal -->
+		<div id="locationModal" class="modal" style="display: none">
+			<div class="modal-content">
+				<span class="close" onclick="closeModal()">&times;</span>
+				<form id="locationForm">
+					<label for="location">Enter your location:</label>
+					<input type="text" id="location" name="location" required />
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+		</div>
+
+		<header style="display: none" id="mainHeader">
 			<h1>Welcome to the Online Nursery</h1>
 			<nav>
 				<ul>
@@ -17,9 +30,12 @@
 					<li><a href="grasses.html">Grasses</a></li>
 					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
 					<li><a href="checkout.html">Checkout</a></li>
-					<!-- Add this line -->
 				</ul>
 			</nav>
+			<span
+				id="userLocation"
+				style="color: white; float: right; padding-right: 20px"
+			></span>
 			<img
 				src="shopping-cart.png"
 				alt="Shopping Cart"

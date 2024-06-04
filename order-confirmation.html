@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="plants.html">All Plants</a></li>
+                <li><a href="fruit-trees.html">Fruit Trees</a></li>
+                <li><a href="succulents.html">Succulents</a></li>
+                <li><a href="grasses.html">Grasses</a></li>
+                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <img src="shopping-cart.png" alt="Shopping Cart" class="cart-icon" onclick="window.location.href='checkout.html'">
+    </header>
+    <main>
+        <div id="order-details">
+            <h2>Your order has been placed successfully!</h2>
+            <h3>Order Summary</h3>
+            <ul id="ordered-items"></ul>
+        </div>
+        <button onclick="goToHome()">Go to Home</button>
+    </main>
+    <script src="order-confirmation.js"></script>
+</body>
+</html>
