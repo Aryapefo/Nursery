@@ -24,12 +24,12 @@ nav ul li {
 }
 
 nav ul li a {
-	color: white; /* Set the desired link color */
+	color: white;
 	text-decoration: none;
 }
 
 nav ul li a:visited {
-	color: white; /* Ensure visited links retain the same color */
+	color: white;
 }
 
 .cart-icon {
@@ -47,7 +47,7 @@ main {
 	border: 1px solid #ccc;
 	background: white;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	max-width: 1200px; /* Adjusted max-width for plant listing */
+	max-width: 1200px;
 }
 
 .response-area {
@@ -102,8 +102,8 @@ textarea {
 	background-position: center;
 	margin: 5% auto;
 	padding: 20px;
-	width: 90%; /* Adjust */
-	height: 80%; /* This can be adjusted based on the image and desired modal size */
+	width: 90%;
+	height: 80%;
 	position: relative;
 	display: flex;
 	align-items: center;
@@ -124,14 +124,14 @@ textarea {
 	position: absolute;
 	width: 300px;
 	cursor: move;
-	user-select: none; /* Prevents the image from being selected */
+	user-select: none;
 }
 
 .plant-list {
 	display: grid;
-	grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-	gap: 15px;
-	margin-bottom: 20px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .plant {
@@ -140,7 +140,7 @@ textarea {
 	border-radius: 5px;
 	background-color: #fff;
 	text-align: center;
-	cursor: pointer; /* Add cursor pointer for clickable items */
+	cursor: pointer;
 }
 
 .plant img {

@@ -31,7 +31,7 @@ const plants = [
     { id: 30, name: 'Bentgrass', image: 'grass5.jpg', price: '$11.00', description: 'Bentgrass is commonly found on coastlines' },
 ];
 
-const plantsPerPage = 25;
+const plantsPerPage = 10;
 let currentPage = 1;
 
 function renderPlants() {

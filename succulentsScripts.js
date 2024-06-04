@@ -31,7 +31,7 @@ const plants = [
     { id: 30, name: 'Echeveria', image: 'plant10.jpg', price: '$11.00', description: 'Echeveria is found in North America' },
 ];
 
-const plantsPerPage = 25;
+const plantsPerPage = 10;
 let currentPage = 1;
 
 function renderPlants() {
