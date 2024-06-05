@@ -40,12 +40,6 @@ function dragElement(elmnt) {
 	}
 }
 
-function askGardener() {
-	const responseArea = document.getElementById("gardener-response");
-	responseArea.innerText =
-		"This is a pre-defined response to common gardening questions.";
-}
-
 const responses = {
 	"how to plant tomatoes":
 		"Tomatoes need full sun and well-drained soil. Plant them after the last frost date.",
@@ -76,12 +70,15 @@ const responses = {
 };
 
 function getGardenerResponse() {
+	document.querySelector(".response-area").style.display = "none";
 	const question = document.getElementById("question-box").value.toLowerCase();
 	const responseArea = document.getElementById("gardener-response");
+	responseArea.style.display = "block";
 	const response =
 		responses[question] ||
 		"Sorry, I don't have an answer for that. Try another question!";
 	responseArea.innerHTML = `<p>${response}</p>`;
+	document.getElementById("question-box").value = "";
 }
 
 const plantsPerPage = 25;
@@ -139,16 +136,21 @@ document.addEventListener("DOMContentLoaded", () => {
 	renderPlants();
 });
 
-window.onload = function () {
+document.addEventListener("DOMContentLoaded", () => {
+	document.getElementById("loadingScreen").style.display = "none";
 	showLocationModal();
-};
+});
+
+// window.onload = function () {
+// 	document.getElementById("loadingScreen").style.display = "none";
+// 	showLocationModal();
+// };
 
 function showLocationModal() {
-	document.getElementById("locationModal").style.display = "block";
-}
-
-function closeModal() {
-	document.getElementById("locationModal").style.display = "none";
+	if (!sessionStorage.getItem("modalShown")) {
+		document.getElementById("locationModal").style.display = "block";
+		sessionStorage.setItem("modalShown", "true");
+	}
 }
 
 document
@@ -158,85 +160,85 @@ document
 		const location = document.getElementById("location").value;
 		document.getElementById(
 			"userLocation"
-		).textContent = `Location: ${location}`;
+		).innerText = `Your location: ${location}`;
 		closeModal();
-		document.getElementById("mainHeader").style.display = "block";
+		loadRecommendations(location);
 	});
 
+function closeModal() {
+	// document.getElementById("loadingScreen").style.display = "none";
+	document.getElementById("locationModal").style.display = "none";
+	document.getElementById("loadingScreen").style.display = "block";
+	setTimeout(() => {
+		document.getElementById("loadingScreen").style.display = "none"; //show a fake loading screen
+	}, 1500);
+	document.getElementById("mainHeader").style.display = "block";
+	document.getElementById("recommendationSection").style.display = "block";
+}
 
+function loadRecommendations(location) {
+	const recommendations = {
+		"San Jose": ["California Poppy", "Coyote Mint", "Manzanita"],
+		default: ["Sunflower", "Lavender", "Rose"],
+	};
 
+	const plants = recommendations[location] || recommendations["default"];
+	const container = document.getElementById("recommendedPlants");
+	container.innerHTML = "";
+	plants.forEach((plant) => {
+		container.innerHTML += `<p>${plant}</p>`;
+	});
+}
 
-
-    document.getElementById('locationForm').addEventListener('submit', function(event) {
-        event.preventDefault();
-        const location = document.getElementById('location').value;
-        document.getElementById('userLocation').innerText = `Your location: ${location}`;
-        closeModal();
-        loadRecommendations(location);
-    });
-    
-    function showLocationModal() {
-        document.getElementById('locationModal').style.display = 'block';
-    }
-    
-    function closeModal() {
-        document.getElementById('locationModal').style.display = 'none';
-        document.getElementById('mainHeader').style.display = 'block';
-        document.getElementById('recommendationSection').style.display = 'block';
-    }
-    
-    function loadRecommendations(location) {
-        const recommendations = {
-            "San Jose": ["California Poppy", "Coyote Mint", "Manzanita"],
-            "default": ["Sunflower", "Lavender", "Rose"]
-        };
-    
-        const plants = recommendations[location] || recommendations["default"];
-        const container = document.getElementById('recommendedPlants');
-        container.innerHTML = '';
-        plants.forEach(plant => {
-            container.innerHTML += `<p>${plant}</p>`;
-        });
-    }
-    
-
-
-const succulents = plants.filter(plant => plant.type === 'Succulent');
-const grasses = plants.filter(plant => plant.type === 'Grass');
+const succulents = plants.filter((plant) => plant.type === "Succulent");
+const grasses = plants.filter((plant) => plant.type === "Grass");
 
 function renderPlants(plantList, containerId) {
-    const container = document.getElementById(containerId);
-    container.innerHTML = '';
+	const container = document.getElementById(containerId);
+	container.innerHTML = "";
 
-    plantList.forEach(plant => {
-        const plantDiv = document.createElement('div');
-        plantDiv.className = 'plant-card';
-        plantDiv.innerHTML = `
+	plantList.forEach((plant) => {
+		const plantDiv = document.createElement("div");
+		plantDiv.className = "plant-card";
+		plantDiv.innerHTML = `
             <img src="${plant.image}" alt="${plant.name}">
             <h3>${plant.name}</h3>
             <p>${plant.description}</p>
             <p><strong>Price:</strong> ${plant.price}</p>
             <button onclick="addToCart(${plant.id})">Add to Cart</button>
         `;
-        container.appendChild(plantDiv);
-    });
+		container.appendChild(plantDiv);
+	});
 }
 
 function addToCart(plantId) {
-    const plant = plants.find(p => p.id === plantId);
-    let cart = JSON.parse(localStorage.getItem('cart')) || [];
-    cart.push(plant);
-    localStorage.setItem('cart', JSON.stringify(cart));
-    alert(`${plant.name} has been added to your cart.`);
+	const plant = plants.find((p) => p.id === plantId);
+	let cart = JSON.parse(localStorage.getItem("cart")) || [];
+	cart.push(plant);
+	localStorage.setItem("cart", JSON.stringify(cart));
+	alert(`${plant.name} has been added to your cart.`);
 }
 
-document.addEventListener('DOMContentLoaded', () => {
-    renderPlants(succulents, 'succulent-list');
-    renderPlants(grasses, 'grass-list');
+document.addEventListener("DOMContentLoaded", () => {
+	renderPlants(succulents, "succulent-list");
+	renderPlants(grasses, "grass-list");
 });
 
 const plants = [
-    { id: 1, name: 'Lawngrass', image: 'grass1.jpg', price: '$8.00', description: 'Lawngrass is commonly found in your backyard', type: 'Grass' },
-    { id: 2, name: 'Aloe Vera', image: 'succulent1.jpg', price: '$15.00', description: 'Aloe Vera is good for skin treatment and decoration', type: 'Succulent' },
+	{
+		id: 1,
+		name: "Lawngrass",
+		image: "grass1.jpg",
+		price: "$8.00",
+		description: "Lawngrass is commonly found in your backyard",
+		type: "Grass",
+	},
+	{
+		id: 2,
+		name: "Aloe Vera",
+		image: "succulent1.jpg",
+		price: "$15.00",
+		description: "Aloe Vera is good for skin treatment and decoration",
+		type: "Succulent",
+	},
 ];
-
