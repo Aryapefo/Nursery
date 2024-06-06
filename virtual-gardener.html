@@ -27,10 +27,6 @@
 			/>
 		</header>
 
-		<section class="page-header">
-			<h2>Virtual Gardener</h2>
-		</section>
-
 		<main id="virtual-gardener">
 			<h2>Have a question about gardening? Ask away!</h2>
 			<textarea
@@ -39,6 +35,20 @@
 			></textarea>
 			<button id="ask-button" onclick="getGardenerResponse()">Ask</button>
 			<div id="gardener-response" class="response-area"></div>
+			<div id="example-questions">
+				<h3>Or try one of these common questions:</h3>
+				<button
+					onclick="showResponse('when is the best time to plant spring bulbs in California')"
+				>
+					when is the best time to plant spring bulbs in California?
+				</button>
+				<button onclick="showResponse('best fertilizer for roses')">
+					Best fertilizer for roses?
+				</button>
+				<button onclick="showResponse('when to prune apple trees')">
+					When to prune apple trees?
+				</button>
+			</div>
 		</main>
 
 		<script src="script.js"></script>
