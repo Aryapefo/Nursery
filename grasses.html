@@ -39,6 +39,15 @@
 			<button id="nextPage" onclick="changePage(1)">Next</button>
 		</div>
 
+		<button onclick="openARVisualizer()" class="view-ar-button">View in AR</button>
+
+		<div id="ar-visualizer" class="ar-modal" style="display:none;">
+			<div class="ar-content">
+				<span class="close-btn" onclick="closeARVisualizer()">&times;</span>
+				<img id="draggable-plant" src="plant-image.png" alt="Draggable Plant">
+			</div>
+		</div>
+
 		<script src="galleryScipts.js"></script>
 	</body>
 </html>
