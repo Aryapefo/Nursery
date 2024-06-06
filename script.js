@@ -47,42 +47,44 @@ function dragElement(elmnt) {
 
 const responses = {
 	"how to plant tomatoes":
-		"Tomatoes need full sun and well-drained soil. Plant them after the last frost date.",
+		"To successfully plant tomatoes, choose a sunny spot that receives at least 6-8 hours of direct sunlight per day. Ensure the soil is well-draining and enriched with compost or organic matter. Plant your tomatoes after the danger of frost has passed to give them the best start.",
 	"best fertilizer for roses":
-		"Use a balanced 10-10-10 fertilizer or compost tea every four weeks.",
+		"Roses thrive with fertilizers that provide a balanced nutrient mix, such as a 10-10-10 formula. Apply this type of fertilizer or a nutrient-rich compost tea every four weeks during the growing season. Avoid over-fertilization which can lead to excessive leaf growth at the expense of blooms.",
 	"when to prune apple trees":
-		"Prune apple trees in late winter to encourage spring growth.",
+		"Prune apple trees during the late winter or early spring before new growth starts. This timing helps prevent the spread of diseases and allows the tree to heal quickly. Pruning during this period encourages healthy growth and fruit production in the coming season.",
 	"what native plants are good for San Jose gardens":
-		"San Jose is ideal for California poppies, Coyote mint, and Manzanita. These natives are drought-tolerant and great for attracting pollinators.",
+		"San Jose gardens benefit from native plants like California poppies, Coyote mint, and Manzanita. These plants are well-adapted to the local climate, require less water, and support local wildlife. They are also excellent for creating a sustainable garden landscape.",
 	"how often to water succulents in hot climates":
-		"In hot climates, water succulents once every 1-2 weeks, allowing the soil to dry out completely between waterings.",
+		"In hot climates, succulents should be watered once every one to two weeks, depending on the weather conditions. Allow the soil to completely dry out between waterings to prevent root rot. During extremely hot spells, occasional misting may be necessary to reduce stress.",
 	"identify pests on lemon trees":
-		"Common pests on lemon trees include aphids, mites, and scale. Check for sticky leaves, webbing, or bumps on stems and leaves.",
+		"Common pests affecting lemon trees include aphids, spider mites, and scale insects. These pests often produce sticky honeydew and may cause leaf curling or yellowing. Regular inspections and treatments with appropriate organic or chemical insecticides can help manage these pests.",
 	"tips for growing herbs indoors":
-		"Provide herbs with at least six hours of sunlight, use well-draining pots, and water when the top inch of soil feels dry.",
+		"Growing herbs indoors requires bright light, ideally from a south-facing window. Use pots with good drainage and plant in a well-draining potting mix. Water the herbs when the top inch of soil is dry, and ensure they are not sitting in water.",
 	"how to test soil ph":
-		"You can test soil pH using a home test kit from a garden store. Collect soil samples from different areas, mix them, and follow the kit instructions.",
+		"Testing soil pH is crucial for understanding soil suitability for different plants. Use a home testing kit from a garden store, collecting multiple soil samples from different areas of your garden. Mix these samples together and follow the instructions provided with the kit for accurate results.",
 	"best plants for a shade garden":
-		"For shaded gardens, consider hostas, ferns, and astilbes. These plants thrive in low-light conditions and add texture and color.",
+		"Shade gardens benefit from plants like hostas, ferns, and astilbes, which thrive in low-light conditions. These plants are not only adaptable to shade but also add significant texture and varying colors to your garden. They are ideal for under trees or in the shadow of buildings.",
 	"how to make compost at home":
-		"Combine green waste (vegetable scraps, grass clippings) and brown waste (dry leaves, branches) in a bin. Turn the pile regularly and keep it moist.",
+		"Making compost at home involves mixing green waste, such as kitchen scraps and grass clippings, with brown waste, like dry leaves and small branches. Keep the compost moist and turn it regularly to speed up the decomposition process. This practice will yield rich soil conditioner in a few months.",
 	"where to find native plants in San Jose":
-		"You can find native plants at local nurseries like the Almaden Valley Nursery or through the California Native Plant Society's Santa Clara Valley Chapter.",
+		"In San Jose, native plants can be sourced from local nurseries such as Almaden Valley Nursery or organizations like the California Native Plant Society's Santa Clara Valley Chapter. These sources often provide a variety of plants suited for the local climate and soil conditions.",
 	"natural ways to repel garden pests":
-		"Plant marigolds or garlic around your garden as they naturally repel pests like nematodes and aphids.",
+		"Natural methods to repel garden pests include planting marigolds or garlic among your other plants. These plants emit natural odors that deter common pests like nematodes and aphids, helping to keep your garden healthy without the use of chemicals.",
 	"when is the best time to plant spring bulbs in California":
-		"In California, plant spring bulbs in the fall, around October or November, to ensure they bloom beautifully in spring.",
+		"The optimal time to plant spring bulbs in California is during the fall, specifically around October or November. Planting during this period allows the bulbs to establish roots and take full advantage of the rainy winter season, leading to vibrant blooms in spring.",
 };
+
+function showResponse(questionKey) {
+	const responseArea = document.getElementById("gardener-response");
+	responseArea.style.display = "block";
+	responseArea.innerHTML = `<p>${responses[questionKey]}</p>`;
+	document.getElementById("example-questions").style.display = "none";
+}
 
 function getGardenerResponse() {
 	document.querySelector(".response-area").style.display = "none";
 	const question = document.getElementById("question-box").value.toLowerCase();
-	const responseArea = document.getElementById("gardener-response");
-	responseArea.style.display = "block";
-	const response =
-		responses[question] ||
-		"Sorry, I don't have an answer for that. Try another question!";
-	responseArea.innerHTML = `<p>${response}</p>`;
+	showResponse(question);
 	document.getElementById("question-box").value = "";
 }
 
