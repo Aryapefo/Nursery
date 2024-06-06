@@ -289,3 +289,102 @@ button:hover {
     max-width: 300px;
     height: auto;
 }
+
+
+#question-form {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+}
+
+#helpForm input {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+}
+
+#helpForm textarea {
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	font-size: 16px;
+	line-height: 1;
+}
+
+#helpForm button {
+	background-color: #4caf50;
+	color: white;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+#helpForm button:hover {
+	background-color: #45a049;
+}
+
+#helpForm {
+	display: flex;
+	flex-direction: column;
+	max-width: 400px;
+	margin: auto;
+	padding: 20px;
+	background-color: #f9f9f9;
+	border-radius: 8px;
+	box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+	font-family: Arial, sans-serif;
+}
+
+#FAQs {
+	margin-top: 20px;
+	border: 1px solid #cccccc;
+	padding: 15px;
+	border-radius: 8px;
+	background-color: #f9f9f9;
+}
+
+#FAQs h3 {
+	color: #2c5f2d;
+	font-size: 24px;
+	margin-bottom: 10px;
+}
+
+dt {
+	font-size: 18px;
+	color: #333333;
+	font-weight: bold;
+	border-bottom: 1px solid #cccccc;
+	margin-top: 10px;
+	padding: 5px 0;
+}
+
+dd {
+	font-size: 16px;
+	color: #666666;
+	padding: 5px 0 15px 20px;
+	margin-left: 20px;
+}
+
+dt:hover {
+	cursor: pointer;
+	background-color: #e6e6e6;
+}
+
+dt:not(:first-child) {
+	cursor: pointer;
+}
+dd {
+	display: none;
+}
+dt:hover + dd,
+dd:hover {
+	display: block;
+}
