@@ -247,3 +247,10 @@ const plants = [
 		type: "Succulent",
 	},
 ];
+
+function successMessage(event) {
+	event.preventDefault();
+	document.getElementById("helpForm").style.display = "none";
+	document.getElementById("successMessage").style.display = "block";
+}
+
