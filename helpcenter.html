@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Help Center</title>
+		<link rel="stylesheet" href="styles.css" />
+		<script defer src="script.js"></script>
+	</head>
+	<body>
+		<header id="mainHeader">
+			<h1>Native Roots Nursery</h1>
+			<nav>
+				<ul>
+					<li><a href="index.html">Home</a></li>
+					<li><a href="fruit-trees.html">Fruit Trees</a></li>
+					<li><a href="succulents.html">Succulents</a></li>
+					<li><a href="grasses.html">Grasses</a></li>
+					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+					<li><a href="checkout.html">Checkout</a></li>
+				</ul>
+			</nav>
+			<span id="userLocation"></span>
+			<img
+				src="shopping-cart.png"
+				alt="Shopping Cart"
+				class="cart-icon"
+				onclick="window.location.href='checkout.html'"
+			/>
+		</header>
+		<main>
+			<h2>Help Center</h2>
+			<p>
+				Welcome to the Native Roots Nursery Help Center! Here you can find
+				answers to frequently asked questions, troubleshooting tips, and advice
+				on selecting and caring for your plants.
+			</p>
+			<section id="FAQs">
+				<h3>Frequently Asked Questions</h3>
+				<dl>
+					<dt>How do I know which plants are native to my area?</dt>
+					<dd>
+						You can use our Virtual Gardener feature or consult our geo-adaptive
+						plant recommendations to find plants that are native to your
+						specific location.
+					</dd>
+
+					<dt>What are the benefits of planting native plants?</dt>
+					<dd>
+						Native plants are better adapted to local conditions and require
+						less water and maintenance. They also support local ecosystems and
+						wildlife.
+					</dd>
+
+					<dt>How can I manage pests without harming my plants?</dt>
+					<dd>
+						Using natural pest control methods and selecting disease-resistant
+						plant varieties can help manage pests effectively. Our Virtual
+						Gardener can provide specific advice based on your plant selections.
+					</dd>
+
+					<dt>Can I return plants if they do not thrive?</dt>
+					<dd>
+						We offer a return policy for plants that fail to thrive within a
+						month of purchase, provided care guidelines are followed. Please
+						refer to our return policy for more details.
+					</dd>
+				</dl>
+			</section>
+			<p>
+				Have a question not covered here? Please fill out the form below and
+				we'll get back to you as soon as possible.
+			</p>
+			<form id="helpForm">
+				<label for="name">Name:</label>
+				<input type="text" id="name" name="name" required />
+				<label for="email">Email:</label>
+				<input type="email" id="email" name="email" required />
+				<label for="question-form">Question:</label>
+				<textarea id="question-form" name="question-form" required></textarea>
+				<button onclick="successMessage(event)" type="submit">Submit</button>
+			</form>
+			<div id="successMessage" style="display: none">
+				<h2>Form Submitted Successfully!</h2>
+			</div>
+		</main>
+	</body>
+</html>
