@@ -1,26 +1,22 @@
 const plants = [
-    { id: 1, name: 'Blue Elderberry', image: 'plants/Trees/Blue Elderberry.png', price: '$8.00', description: 'Blue Elderberry is found in forests' },
-    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Desert Willow is found in deserts' },
-    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Hollyleaf Cherry is found in North America' },
-    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Oregon Grape is found in Oregon' },
-    { id: 5, name: 'Valley Oak', image: 'plants/Trees/Valley Oak.jpeg', price: '$11.00', description: 'Valley Oak is found in North America' },
-    { id: 1, name: 'Blue Elderberry', image: 'plants/Trees/Blue Elderberry.png', price: '$8.00', description: 'Blue Elderberry is found in forests' },
-    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Desert Willow is found in deserts' },
-    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Hollyleaf Cherry is found in North America' },
-    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Oregon Grape is found in Oregon' },
-    { id: 5, name: 'Valley Oak', image: 'plants/Trees/Valley Oak.jpeg', price: '$11.00', description: 'Valley Oak is found in North America' },
-    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Desert Willow is found in deserts' },
-    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Hollyleaf Cherry is found in North America' },
-    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Oregon Grape is found in Oregon' },
-    { id: 5, name: 'Valley Oak', image: 'plants/Trees/Valley Oak.jpeg', price: '$11.00', description: 'Valley Oak is found in North America' },
-    { id: 1, name: 'Blue Elderberry', image: 'plants/Trees/Blue Elderberry.png', price: '$8.00', description: 'Blue Elderberry is found in forests' },
-    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Desert Willow is found in deserts' },
-    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Hollyleaf Cherry is found in North America' },
-    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Oregon Grape is found in Oregon' },
-    
+    { id: 1, name: 'Blue Elderberry', image: 'plants/Trees/Blue Elderberry.png', price: '$8.00', description: 'S. cerulea is native to the Western United States, northwestern Mexico, and British Columbia. It is found from the Pacific coasts, through California and the Great Basin, to Montana, Wyoming, Texas and Oklahoma.' },
+    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Chilopsis linearis can be found through much of the southwestern United States and northern Mexico. It is usually found below 5,000 feet (1,500 m).' },
+    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Prunus ilicifolia is native to California chaparral and foothill woodlands along the Coast Ranges below 1,600 m (5,200 ft).' },
+    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Berberis aquifolium is a native plant in the North American West from Southeast Alaska to Northern California to central New Mexico, often occurring in the understory of Douglas-fir forests.' },
+    { id: 5, name: 'Valley Oak', image: 'plants/Trees/Valley Oak.jpeg', price: '$11.00', description: 'The Valley Oak is widely distributed in the California Central Valley and many smaller valleys such as the San Fernando Valley.' },
+    { id: 1, name: 'Blue Elderberry', image: 'plants/Trees/Blue Elderberry.png', price: '$8.00', description: 'S. cerulea is native to the Western United States, northwestern Mexico, and British Columbia. It is found from the Pacific coasts, through California and the Great Basin, to Montana, Wyoming, Texas and Oklahoma.' },
+    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Chilopsis linearis can be found through much of the southwestern United States and northern Mexico. It is usually found below 5,000 feet (1,500 m).' },
+    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Prunus ilicifolia is native to California chaparral and foothill woodlands along the Coast Ranges below 1,600 m (5,200 ft).' },
+    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Berberis aquifolium is a native plant in the North American West from Southeast Alaska to Northern California to central New Mexico, often occurring in the understory of Douglas-fir forests.' },
+    { id: 5, name: 'Valley Oak', image: 'plants/Trees/Valley Oak.jpeg', price: '$11.00', description: 'The Valley Oak is widely distributed in the California Central Valley and many smaller valleys such as the San Fernando Valley.' },
+    { id: 1, name: 'Blue Elderberry', image: 'plants/Trees/Blue Elderberry.png', price: '$8.00', description: 'S. cerulea is native to the Western United States, northwestern Mexico, and British Columbia. It is found from the Pacific coasts, through California and the Great Basin, to Montana, Wyoming, Texas and Oklahoma.' },
+    { id: 2, name: 'Desert Willow', image: 'plants/Trees/Desert Willow.jpg', price: '$10.00', description: 'Chilopsis linearis can be found through much of the southwestern United States and northern Mexico. It is usually found below 5,000 feet (1,500 m).' },
+    { id: 3, name: 'Hollyleaf Cherry', image: 'plants/Trees/Hollyleaf Cherry.jpeg', price: '$9.00', description: 'Prunus ilicifolia is native to California chaparral and foothill woodlands along the Coast Ranges below 1,600 m (5,200 ft).' },
+    { id: 4, name: 'Oregon Grape', image: 'plants/Trees/Oregon Grape.jpeg', price: '$12.00', description: 'Berberis aquifolium is a native plant in the North American West from Southeast Alaska to Northern California to central New Mexico, often occurring in the understory of Douglas-fir forests.' },
+    { id: 5, name: 'Valley Oak', image: 'plants/Trees/Valley Oak.jpeg', price: '$11.00', description: 'The Valley Oak is widely distributed in the California Central Valley and many smaller valleys such as the San Fernando Valley.' },
 ];
 
-const plantsPerPage = 10;
+const plantsPerPage = 9;
 let currentPage = 1;
 
 function renderPlants() {
