@@ -1,68 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Native Roots Nursery</title>
-		<link rel="stylesheet" href="styles.css" />
-	</head>
-	<!-- <body onload="showLocationModal()"> -->
-	<body>
-		<div id="locationModal" class="modal">
-			<div class="modal-content">
-				<form id="locationForm">
-					<label for="location">Enter your location:</label>
-					<input type="text" id="location" name="location" required />
-					<button type="submit">Submit</button>
-				</form>
-			</div>
-		</div>
-		<div id="loadingScreen"><p>Loading Your Native Plants...</p></div>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Native Roots Nursery</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index-styles.css" />
+</head>
+<body>
+    <div id="locationModal" class="modal">
+        <div class="modal-content">
+            <form id="locationForm">
+                <label for="location">Enter your location:</label>
+                <input type="text" id="location" name="location" required />
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+    </div>
+    <div id="loadingScreen"><p>Loading Your Native Plants...</p></div>
 
-		<header id="mainHeader">
-			<h1>Native Roots Nursery</h1>
-			<nav>
-				<ul>
-					<li><a href="index.html">Home</a></li>
-					<li><a href="fruit-trees.html">Fruit Trees</a></li>
-					<li><a href="succulents.html">Succulents</a></li>
-					<li><a href="grasses.html">Grasses</a></li>
-					<li><a href="virtual-gardener.html">Virtual Gardener</a></li>
-					<li><a href="checkout.html">Checkout</a></li>
-				</ul>
-			</nav>
-			<span id="userLocation"></span>
-			<img
-				src="shopping-cart.png"
-				alt="Shopping Cart"
-				class="cart-icon"
-				onclick="window.location.href='checkout.html'"
-			/>
-		</header>
+    <header id="mainHeader">
+        <h1>Native Roots Nursery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="fruit-trees.html">Fruit Trees</a></li>
+                <li><a href="succulents.html">Succulents</a></li>
+                <li><a href="grasses.html">Grasses</a></li>
+                <li><a href="virtual-gardener.html">Virtual Gardener</a></li>
+                <li><a href="checkout.html">Checkout</a></li>
+            </ul>
+        </nav>
+        <span id="userLocation"></span>
+        <img
+            src="shopping-cart.png"
+            alt="Shopping Cart"
+            class="cart-icon"
+            onclick="window.location.href='checkout.html'"
+        />
+    </header>
 
-		<section class="plant-category">
-			<h2>Succulents</h2>
-			<div class="plant-scroll">
-				<div class="plant-card">
-					<img src="plant7.jpg" alt="Succulent Plant" />
-					<h3>Succulent Name</h3>
-					<p>Description of the succulent...</p>
-					<button onclick="addToCart()">Add to Cart</button>
-				</div>
-			</div>
-		</section>
+    <main>
+        <section class="plant-category">
+            <h2>Your Native Succulents</h2>
+            <div class="plant-scroll">
+                <div class="plant-card" onclick="navigateTo('succulents.html')">
+                    <img src="plant7.jpg" alt="Succulent Plant" class="small-img" />
+                </div>
+            </div>
+        </section>
 
-		<section class="plant-category">
-			<h2>Grasses</h2>
-			<div class="plant-scroll">
-				<div class="plant-card">
-					<img src="grass1.jpg" alt="Grass Plant" />
-					<h3>Grass Name</h3>
-					<p>Description of the grass...</p>
-					<button onclick="addToCart()">Add to Cart</button>
-				</div>
-			</div>
-		</section>
-		<script src="script.js" defer></script>
-	</body>
+        <section class="plant-category">
+            <h2>Your Native Grasses</h2>
+            <div class="plant-scroll">
+                <div class="plant-card" onclick="navigateTo('grasses.html')">
+                    <img src="grass1.jpg" alt="Grass Plant" class="small-img" />
+                </div>
+            </div>
+        </section>
+
+        <section class="plant-category">
+            <h2>Your Native Fruit Trees</h2>
+            <div class="plant-scroll">
+                <div class="plant-card" onclick="navigateTo('fruit-trees.html')">
+                    <img src="fruittree.jpeg" alt="Fruit Tree" class="small-img" />
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js" defer></script>
+</body>
 </html>

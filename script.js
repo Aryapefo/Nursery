@@ -7,6 +7,11 @@ function closeARVisualizer() {
 	document.getElementById("ar-visualizer").style.display = "none";
 }
 
+function navigateTo(page) {
+    window.location.href = page;
+}
+
+
 function dragElement(elmnt) {
 	var pos1 = 0,
 		pos2 = 0,
