@@ -31,7 +31,7 @@ const plants = [
     { id: 30, name: 'Santa Barbara Island Dudleya', image: 'plants/Succulents/Santa Barbara Island Dudleya.jpg', price: '$11.00', description: 'Dudleya traskiae is known only from Santa Barbara Island, California.' },
 ];
 
-const plantsPerPage = 10;
+const plantsPerPage = 9;
 let currentPage = 1;
 
 function renderPlants() {
