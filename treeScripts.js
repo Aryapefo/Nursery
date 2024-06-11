@@ -36,7 +36,7 @@ function renderPlants() {
             <p>${plant.description}</p>
             <p><strong>Price:</strong> ${plant.price}</p>
             <button onclick="addToCart(${plant.id})">Add to Cart</button>
-            <button onclick="openARVisualizer('${plant.image}')">View in AR</button>  <!-- Added button here -->
+            <button onclick="openARVisualizer('${plant.image}')">View in AR</button>  
         `;
         plantList.appendChild(plantDiv);
     });
@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function openARVisualizer(imgSrc) {
     document.getElementById('ar-visualizer').style.display = 'block';
-    document.getElementById('draggable-plant').src = imgSrc;  // Change source dynamically
+    document.getElementById('draggable-plant').src = imgSrc;  
     dragElement(document.getElementById("draggable-plant"));
 }
 
@@ -100,13 +100,11 @@ function dragElement(elmnt) {
         pos2 = pos4 - e.clientY;
         pos3 = e.clientX;
         pos4 = e.clientY;
-        // New position calculations will be within the modal:
         elmnt.style.top = (elmnt.offsetTop - pos2) + "px";
         elmnt.style.left = (elmnt.offsetLeft - pos1) + "px";
     }
 
     function closeDragElement() {
-        // stop moving when mouse button is released
         document.onmouseup = null;
         document.onmousemove = null;
     }
