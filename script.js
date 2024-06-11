@@ -148,10 +148,6 @@ document.addEventListener("DOMContentLoaded", () => {
 	showLocationModal();
 });
 
-// window.onload = function () {
-// 	document.getElementById("loadingScreen").style.display = "none";
-// 	showLocationModal();
-// };
 
 function showLocationModal() {
 	if (!sessionStorage.getItem("modalShown")) {
@@ -173,11 +169,10 @@ document
 	});
 
 function closeModal() {
-	// document.getElementById("loadingScreen").style.display = "none";
 	document.getElementById("locationModal").style.display = "none";
 	document.getElementById("loadingScreen").style.display = "block";
 	setTimeout(() => {
-		document.getElementById("loadingScreen").style.display = "none"; //show a fake loading screen
+		document.getElementById("loadingScreen").style.display = "none"; 
 	}, 1500);
 	document.getElementById("mainHeader").style.display = "block";
 	document.getElementById("recommendationSection").style.display = "block";
@@ -255,4 +250,3 @@ function successMessage(event) {
 	document.getElementById("helpForm").style.display = "none";
 	document.getElementById("successMessage").style.display = "block";
 }
-
